@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 01:13:40 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:18:59 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 20:08:03 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ typedef struct	s_map
 	char	**layout;
 	t_img	wall;
 	t_img	floor;
+	t_img	collect;
+	t_img	exit;
+	t_img	open_exit;
 	int		width;
 	int		height;
 }				t_map;
@@ -62,7 +65,8 @@ typedef struct	s_game
 	t_vars		vars;
 	t_img		img;
 	t_map		map;
-	t_player player;
+	t_player	player;
+	int			is_open;
 }				t_game;
 
 # define SPRITE_SIZE 32
@@ -91,11 +95,15 @@ typedef struct	s_game
 # define ESC 65307
 
 int		map_gen(t_game *game, char *map_set);
-int		draw_game(t_game *game);
 void	game_init(t_game *game);
+int		check_map(t_game *game);
+int		draw_game(t_game *game);
 void	load_sprites(t_game *game);
 int		key_hook(int keycode, t_game *game);
 void	map_init(t_game *game);
 int		player_position(t_game *game);
+void	check_collectible(t_game *game);
+void	check_exit(t_game *game);
+int		close_game(t_game *game);
 
 #endif

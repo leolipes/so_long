@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:13:20 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:22:47 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 19:29:31 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ int	draw_map(t_game *game)
 			if (game->map.layout[y][x] == FLOOR \
 				|| game->map.layout[y][x] == PLAYER)
 				draw_img(game, &game->map.floor, x, y);
+			if (game->map.layout[y][x] == COLLECT)
+				draw_img(game, &game->map.collect, x, y);
+			if (game->map.layout[y][x] == EXIT)
+			{
+				if (game->is_open == 0)
+					draw_img(game, &game->map.exit, x, y);
+				else
+					draw_img(game, &game->map.open_exit, x, y);
+			}
 			x++;
 		}
 		x = 0;
@@ -54,3 +63,4 @@ int		draw_game(t_game *game)
 	draw_player(game);
 	return (0);
 }
+

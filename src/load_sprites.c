@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:54:31 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/08 19:47:40 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 19:18:54 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ void	load_sprites_map(t_game *game)
 	game->map.wall.img = mlx_xpm_file_to_image(game->vars.mlx, \
 		"./assets/sprites/map/wall.xpm", &game->map.wall.width, \
 			&game->map.wall.height);
+	game->map.collect.img = mlx_xpm_file_to_image(game->vars.mlx, \
+		"./assets/sprites/map/collect.xpm", &game->map.collect.width, \
+			&game->map.collect.height);
+	game->map.exit.img = mlx_xpm_file_to_image(game->vars.mlx, \
+		"./assets/sprites/map/exit.xpm", &game->map.exit.width, \
+			&game->map.exit.height);
+	game->map.open_exit.img = mlx_xpm_file_to_image(game->vars.mlx, \
+		"./assets/sprites/map/open_exit.xpm", &game->map.open_exit.width, \
+			&game->map.open_exit.height);
 }
 
 void	load_sprites(t_game *game)
