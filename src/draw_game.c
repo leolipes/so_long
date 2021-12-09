@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:13:20 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/08 20:52:56 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:22:47 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	draw_map(t_game *game)
 		{
 			if (game->map.layout[y][x] == WALL)
 				draw_img(game, &game->map.wall, x, y);
-			if (game->map.layout[y][x] == FLOOR || game->map.layout[y][x] == \
-			PLAYER)
+			if (game->map.layout[y][x] == FLOOR \
+				|| game->map.layout[y][x] == PLAYER)
 				draw_img(game, &game->map.floor, x, y);
 			x++;
 		}

@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 19:14:49 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/08 21:05:05 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:14:09 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	key_hook(int keycode, t_game *game)
 		}
 		game->player.direction = PLAYER_DOWN;
 	}
-	printf("steps: %d\n", game->player.steps);
+	printf("keycode: %d\n", keycode);
 	fflush(stdout);
 	return (0);
 }

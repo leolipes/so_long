@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 01:13:40 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/08 21:04:26 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:18:59 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ typedef struct	s_game
 # define WALL '1'
 # define FLOOR '0'
 # define PLAYER 'P'
-# define ITENS 'C'
+# define COLLECT 'C'
 # define EXIT 'E'
 
 # define PLAYER_UP 0
@@ -87,6 +87,8 @@ typedef struct	s_game
 # define KEY_LEFT 65361
 # define KEY_DOWN 65364
 # define KEY_RIGHT 65363
+
+# define ESC 65307
 
 int		map_gen(t_game *game, char *map_set);
 int		draw_game(t_game *game);
