@@ -6,16 +6,11 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:56:07 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/08 18:38:48 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/11 20:28:50 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-/* com o GNL vou ler todo o arquivo do mapa, uso o strdub pra ter oq dar free
-** depois, uso o strjoin para juntar as linhas q estou lendo, depois uso split
-** pra transformar tudo que li em matriz.
-*/
 
 int	map_gen(t_game *game, char *map_set)
 {
@@ -41,5 +36,5 @@ int	map_gen(t_game *game, char *map_set)
 	game->map.layout = ft_split(map, '\n');
 	free(map);
 	close(fd);
-	return (0);
+	return (1);
 }

@@ -19,9 +19,9 @@ int	player_position(t_game *game)
 
 	x = 0;
 	y = 0;
-	while(y < game->map.height)
+	while (y < game->map.height)
 	{
-		while(x < game->map.width)
+		while (x < game->map.width)
 		{
 			if (game->map.layout[y][x] == PLAYER)
 			{

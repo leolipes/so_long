@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 01:13:40 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/09 20:08:03 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/11 20:28:17 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
 # include "../libft/libft.h"
 # include "../get_next_line/get_next_line.h"
 
-typedef struct	s_vars
+typedef struct s_vars
 {
 	void	*mlx;
 	void	*win;
 }				t_vars;
 
-typedef struct	s_img {
+typedef struct s_img {
 	void	*img;
 	char	*addr;
 	int		width;
@@ -38,8 +38,7 @@ typedef struct	s_img {
 	int		endian;
 }				t_img;
 
-
-typedef struct	s_map
+typedef struct s_map
 {
 	char	**layout;
 	t_img	wall;
@@ -51,19 +50,18 @@ typedef struct	s_map
 	int		height;
 }				t_map;
 
-typedef struct	s_player
+typedef struct s_player
 {
-	t_img	sprite[4];//4 elementos, indice começando em 0
+	t_img	sprite[4];
 	int		direction;
 	int		steps;
 	int		x;
 	int		y;
 }				t_player;
 
-typedef struct	s_game
+typedef struct s_game
 {
 	t_vars		vars;
-	t_img		img;
 	t_map		map;
 	t_player	player;
 	int			is_open;
@@ -96,13 +94,17 @@ typedef struct	s_game
 
 int		map_gen(t_game *game, char *map_set);
 void	game_init(t_game *game);
+void	map_init(t_game *game);
 int		check_map(t_game *game);
-int		draw_game(t_game *game);
 void	load_sprites(t_game *game);
 int		key_hook(int keycode, t_game *game);
-void	map_init(t_game *game);
 int		player_position(t_game *game);
 void	check_collectible(t_game *game);
+void	move_up(t_game *game);
+void	move_left(t_game *game);
+void	move_right(t_game *game);
+void	move_down(t_game *game);
+int		draw_game(t_game *game);
 void	check_exit(t_game *game);
 int		close_game(t_game *game);
 
