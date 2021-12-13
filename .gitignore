@@ -1,0 +1,7 @@
+a.out
+*.o
+*.a
+objects
+so_long
+.nfs000000000eb003a5000005ac
+vgcore*
