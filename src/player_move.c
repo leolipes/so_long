@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 19:32:51 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/11 20:28:38 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/13 00:02:23 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	move_up(t_game *game)
 	{
 		game->player.y--;
 		game->player.steps++;
+		printf("steps: %d\n", game->player.steps);
 	}
 	game->player.direction = PLAYER_UP;
 }
@@ -34,6 +35,7 @@ void	move_left(t_game *game)
 	{
 		game->player.x--;
 		game->player.steps++;
+		printf("steps: %d\n", game->player.steps);
 	}
 	game->player.direction = PLAYER_LEFT;
 }
@@ -47,6 +49,7 @@ void	move_right(t_game *game)
 	{
 		game->player.x++;
 		game->player.steps++;
+		printf("steps: %d\n", game->player.steps);
 	}
 	game->player.direction = PLAYER_RIGHT;
 }
@@ -60,6 +63,7 @@ void	move_down(t_game *game)
 	{
 		game->player.y++;
 		game->player.steps++;
+		printf("steps: %d\n", game->player.steps);
 	}
 	game->player.direction = PLAYER_DOWN;
 }

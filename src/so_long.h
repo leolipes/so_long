@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 01:13:40 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/11 20:28:17 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/12 23:17:56 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ typedef struct s_game
 # define ESC 65307
 
 int		map_gen(t_game *game, char *map_set);
+int		check_map_extension(char *file_name);
 void	game_init(t_game *game);
 void	map_init(t_game *game);
 int		check_map(t_game *game);
@@ -107,5 +108,6 @@ void	move_down(t_game *game);
 int		draw_game(t_game *game);
 void	check_exit(t_game *game);
 int		close_game(t_game *game);
+void	free_map(t_game *game);
 
 #endif

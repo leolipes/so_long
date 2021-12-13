@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 19:14:49 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/12 01:32:28 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/13 00:01:55 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	key_hook(int keycode, t_game *game)
 {
 	if (keycode == ESC)
 		close_game(game);
+	if (game->is_open == 1)
+		return (1);
 	if (keycode == KEY_W || keycode == KEY_UP)
 		move_up(game);
 	if (keycode == KEY_A || keycode == KEY_LEFT)

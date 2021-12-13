@@ -109,9 +109,19 @@ int	check_is_surrounded(t_game *game)
 int	check_map(t_game *game)
 {
 	if (check_is_rectangular(game) == 0)
+	{
+		free_map(game);
 		return (0);
+	}
 	if (check_elements(game) == 0)
+	{
+		free_map(game);
 		return (0);
+	}
 	if (check_is_surrounded(game) == 0)
+	{
+		free_map(game);
 		return (0);
+	}
+	return (1);
 }

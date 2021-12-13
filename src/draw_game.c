@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:13:20 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/11 20:29:32 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/12 23:57:55 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	draw_player(t_game *game)
 int	draw_game(t_game *game)
 {
 	draw_map(game);
-	draw_player(game);
+	if (game->is_open == 0)
+		draw_player(game);
 	return (0);
 }

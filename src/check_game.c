@@ -12,6 +12,23 @@
 
 #include "so_long.h"
 
+int	check_map_extension(char *file_name)
+{
+	int	i;
+
+	i = ft_strlen(file_name);
+	if (i < 4)
+	{
+		printf("this map does not have the .ber extension!\n");
+		return (0);
+	}
+	if (file_name[i - 4] == '.' && file_name[i - 3] == 'b' \
+		&& file_name[i - 2] == 'e' && file_name[i - 1] == 'r')
+		return (1);
+	printf("this map does not have the .ber extension!\n");
+	return (0);
+}
+
 void	check_collectible(t_game *game)
 {
 	if (game->map.layout[game->player.y][game->player.x] == COLLECT)

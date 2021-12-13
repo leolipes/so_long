@@ -24,7 +24,7 @@ NAME = so_long
 
 CC = gcc
 
-#CFLAGS = -Wall -Wextra -Werror -Imlx
+CFLAGS = -Wall -Wextra -Werror -Imlx
 
 FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 
@@ -51,5 +51,7 @@ libft:
 
 libft_fclean:
 	make fclean -C ./libft
+
+bonus: all
 
 .PHONY: libft
