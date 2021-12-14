@@ -6,7 +6,7 @@
 /*   By: lfilipe- <coder@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:55:09 by lfilipe-          #+#    #+#             */
-/*   Updated: 2021/12/12 23:16:16 by lfilipe-         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:21:38 by lfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	game_init(t_game *game)
 	game->player.direction = PLAYER_RIGHT;
 	game->player.steps = 0;
 	game->is_open = 0;
+	printf("steps: %d\n", game->player.steps);
 }
